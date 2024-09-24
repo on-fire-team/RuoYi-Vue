@@ -26,10 +26,11 @@ import com.ruoyi.common.utils.StringUtils;
 
 /**
  * Mybatis支持*匹配扫描包
- * 
+ * @see com.ruoyi.onfire.config.MybatisPlusConfig
  * @author ruoyi
  */
-@Configuration
+//@Configuration
+@Deprecated
 public class MyBatisConfig
 {
     @Autowired

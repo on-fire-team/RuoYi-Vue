@@ -52,7 +52,7 @@ spring:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles:
-    active: druid
+    active: druid, resource
   # 文件上传
   servlet:
     multipart:
@@ -68,19 +68,19 @@ spring:
   # redis 配置
   redis:
     # 地址
-    host: localhost
+    host: ${redis.host}
     # 端口，默认为6379
-    port: 6379
+    port: ${redis.port}
     # 数据库索引
-    database: 0
+    database: 1
     # 密码
-    password:
+    password: ${redis.password}
     # 连接超时时间
-    timeout: 10s
+    timeout: 30s
     lettuce:
       pool:
         # 连接池中的最小空闲连接
-        min-idle: 0
+        min-idle: 4
         # 连接池中的最大空闲连接
         max-idle: 8
         # 连接池的最大数据库连接数
